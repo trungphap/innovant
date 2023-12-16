@@ -3,7 +3,7 @@ version: '3.7'
 services:
   data-science:
     container_name: data-science
-    image: bd-nb
+    image: bfa1trung/notebook:latest
     volumes:
       - ./work:/home/jupyter/work
     ports:
