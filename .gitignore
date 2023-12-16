@@ -1,3 +1,4 @@
 work/.ipynb_checkpoints/
 mvc/bin/*
 mvc/obj/*
+mvc/wwwroot/*

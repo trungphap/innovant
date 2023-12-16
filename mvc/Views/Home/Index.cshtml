@@ -1,6 +1,7 @@
 ﻿@{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "UI Container";
 }
+@model List<ClassificationReport>
 
 <div class="text-center">
     <h1 class="display-4">Breast Cancer Analysis Result</h1>
@@ -29,5 +30,150 @@
     <br>
     <p style="text-align:left;font-size:30px">Distribution of attribut 6</p>
     <img src="@ViewBag.Attr6" alt="Attribut 6"  width="1500" height="1200">
+
+   
+
+  
+
+      @foreach (var item in Model)
+        {
+
+             <p style="text-align:left;font-size:30px">Classification Report for @item.ReportName</p>
+
+              <div id="divID">
+        <table>
+
+        <tr>
+
+            <th></th>
+
+
+            <th>
+
+                Precision
+
+            </th>
+
+            <th>
+
+                Recall
+
+            </th>
+
+            <th>
+
+                F1 Score
+
+            </th>
+
+
+            <th>
+
+                Support
+
+            </th>
+
+        </tr> 
+    
+
+        <tr>
+
+            <td style="font-weight:bold">
+
+                Malignant
+
+            </td>
+
+            <td>@String.Format("{0:0.##}", item.malignant.precision) </td>
+
+            <td>@String.Format("{0:0.##}", item.malignant.recall)</td>
+
+            <td>@String.Format("{0:0.##}", item.malignant.f1score ) </td>
+
+            <td>@String.Format("{0:0.##}", item.malignant.support)   </td>
+
+        </tr>
+
+         <tr>
+
+            <td style="font-weight:bold">
+
+                Benign
+
+            </td>
+
+            <td>@String.Format("{0:0.##}", item.benign.precision) </td>
+
+            <td>@String.Format("{0:0.##}", item.benign.recall)</td>
+
+            <td>@String.Format("{0:0.##}", item.benign.f1score ) </td>
+
+            <td>@String.Format("{0:0.##}", item.benign.support)   </td>
+
+        </tr>
+
+          <tr>
+
+            <td style="font-weight:bold">
+
+                Accuracy
+
+            </td>
+
+            <td></td>
+
+            <td></td>
+
+            <td>@String.Format("{0:0.##}", item.benign.f1score ) </td>
+
+            <td>  </td>
+
+        </tr>
+
+         <tr>
+
+            <td style="font-weight:bold">
+
+                Macro Avg
+
+            </td>
+
+            <td>@String.Format("{0:0.##}", item.macroavg.precision) </td>
+
+            <td>@String.Format("{0:0.##}", item.macroavg.recall)</td>
+
+            <td>@String.Format("{0:0.##}", item.macroavg.f1score ) </td>
+
+            <td>@String.Format("{0:0.##}", item.macroavg.support)   </td>
+
+        </tr>
+
+           <tr>
+
+            <td style="font-weight:bold">
+
+                Weighted Avg
+
+            </td>
+
+            <td>@String.Format("{0:0.##}", item.weightedavg.precision) </td>
+
+            <td>@String.Format("{0:0.##}", item.weightedavg.recall)</td>
+
+            <td>@String.Format("{0:0.##}", item.weightedavg.f1score ) </td>
+
+            <td>@String.Format("{0:0.##}", item.weightedavg.support)   </td>
+
+        </tr>
+    
+
+
+        </table> 
+
+        </div>
+
+
+          
+        }
 
 </div>

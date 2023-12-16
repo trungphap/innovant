@@ -22,3 +22,17 @@ body {
 }
 
 
+div {
+  margin-bottom: 30px;
+}
+#divID table { 
+  border-top: 1px solid #999;
+  border-left: 1px solid #999;
+  border-collapse: collapse;
+} 
+#divID th, #divID td { 
+  padding: 10px;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+} 
+
