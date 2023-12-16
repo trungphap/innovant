@@ -8,7 +8,7 @@ RUN pip3 install statsmodels
 RUN pip3 install matplotlib
 RUN pip3 install plotly
 RUN pip3 install seaborn
-RUN pip3 install scikit-learn
+RUN pip3 install scikit-learn	
 RUN pip3 install tensorflow
 RUN useradd -ms /bin/bash jupyter
 USER jupyter
