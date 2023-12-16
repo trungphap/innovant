@@ -1,8 +1,8 @@
 version: '3.7'
 
 services:
-  data-science:
-    container_name: data-science
+  algo_container:
+    container_name: algo_container
     image: bfa1trung/notebook:latest
     volumes:
       - ./work:/home/jupyter/work

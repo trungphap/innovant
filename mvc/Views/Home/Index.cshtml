@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Breast Cancer Analysis Result</h1>
+    <hr>
+    <br>
+    <br>
+    <p style="text-align:left;font-size:30px">Correlation between attributs</p>
+    <img src="@ViewBag.Correlation" alt="Correlation">
+
+    <br>
+    <br>
+    <p style="text-align:left;font-size:30px">Distribution of attribut 1</p>
+    <img src="@ViewBag.Attr1" alt="Attribut 1"  width="1500" height="1200">
+
+    <br>
+    <br>
+    <p style="text-align:left;font-size:30px">Distribution of attribut 2</p>
+    <img src="@ViewBag.Attr2" alt="Attribut 2"  width="1500" height="1200">
+
+    <br>
+    <br>
+    <p style="text-align:left;font-size:30px">Distribution of attribut 5</p>
+    <img src="@ViewBag.Attr5" alt="Attribut 5"  width="1500" height="1200">
+
+    <br>
+    <br>
+    <p style="text-align:left;font-size:30px">Distribution of attribut 6</p>
+    <img src="@ViewBag.Attr6" alt="Attribut 6"  width="1500" height="1200">
+
+</div>
