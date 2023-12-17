@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  ui_container:
+    container_name: ui_container
+    image: bfa1trung/mvc:latest
+    volumes:
+      - ./wwwroot:/wwwroot
+    environment:
+      - ASPNETCORE_URLS=https://+:443;http://+:80
