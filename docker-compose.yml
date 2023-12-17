@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  ui_container:
+    container_name: ui_container
+    image: bfa1trung/mvc:latest
+    volumes:
+      - ./mvc/wwwroot/img:/app/wwwroot/img
+      - ./mvc/wwwroot/json:/app/wwwroot/json
+    ports:
+      - "5000:80"
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+      - ASPNETCORE_ENVIRONMENT=Development
+
+
+  algo_container:
+    container_name: algo_container
+    image: bfa1trung/notebook:latest
+    volumes:
+      - ./work:/home/jupyter/work
+      - ./mvc/wwwroot/img:/home/jupyter/mvc/wwwroot/img
+      - ./mvc/wwwroot/json:/home/jupyter/mvc/wwwroot/json
+    ports:
+      - "8889:8888"
+    environment:
+      - JUPYTER_TOKEN=password
