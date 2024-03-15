@@ -13,7 +13,9 @@ RUN pip3 install tensorflow
 RUN useradd -ms /bin/bash jupyter
 USER jupyter
 WORKDIR /home/jupyter
-
-ENTRYPOINT ["jupyter", "notebook", "--ip=*"]
+RUN mkdir -p /home/jupyter/mvc/wwwroot/img
+RUN mkdir -p /home/jupyter/mvc/wwwroot/json
+RUN chown -R jupyter:jupyter /home/jupyter/mvc/wwwroot/img /home/jupyter/mvc/wwwroot/json
+ENTRYPOINT ["jupyter", "notebook", "--ip=*", "Use --allow-root"]
 
 
