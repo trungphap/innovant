@@ -1,0 +1,8 @@
+https://www.if-not-true-then-false.com/2010/install-virtualbox-with-yum-on-fedora-centos-red-hat-rhel/
+
+-----------  virtual box launch --------------
+sudo -i 
+cd /root/signed-modules
+./sign-virtual-box 
+modprobe vboxdrv
+
