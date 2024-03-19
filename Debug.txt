@@ -1,0 +1,5 @@
+In case : vagrant@127.0.0.1: Permission denied
+
+set VAGRANT_PREFER_SYSTEM_BIN=0
+
+vagrant ssh
